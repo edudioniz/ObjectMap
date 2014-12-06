@@ -55,6 +55,7 @@ public class ObjectMap<T,K> {
         try{
             ObjectOutputStream oos = new ObjectOutputStream(os);
             oos.writeObject(map);
+            oos.flush();
             oos.close();
         }catch(IOException ioe){
             ioe.printStackTrace();
